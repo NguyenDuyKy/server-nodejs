@@ -124,7 +124,7 @@ const controller = {
                     connect.to.alias = "agent1";
                     connect.timeout = parseInt(process.env.STRINGEE_INBOUND_TIMEOUT);
                     connect.continueOnFail = true;
-                    connect.onFailEventUrl = "https://zgyz6v-10000.csb.app/on-fail-url";
+                    connect.onFailEventUrl = process.env.ON_FAIL_URL;
                     break;
                 default:
                     break;
