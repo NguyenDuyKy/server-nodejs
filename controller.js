@@ -146,7 +146,7 @@ const controller = {
             connect.from.alias = bodyRequest.from.alias;
             connect.timeout = parseInt(process.env.STRINGEE_INBOUND_TIMEOUT);
             connect.continueOnFail = true;
-            connect.onFailEventUrl = "https://zgyz6v-10000.csb.app/on-fail-url";
+            connect.onFailEventUrl = process.env.ON_FAIL_URL;
             switch (bodyRequest.to.number) {
                 case "agent1":
                     console.log(
