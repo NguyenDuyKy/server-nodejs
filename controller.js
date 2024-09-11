@@ -27,6 +27,13 @@ const connectAction = {
 };
 
 const controller = {
+    healthCheck: async (req, res, next) => {
+        try {
+            return res.send("Server is ON");
+        } catch (err) {
+            next(err);
+        }
+    },
     getCustomerInfo: async (req, res, next) => {
         //Chỗ này xử lý Get customer info URL ở https://pcc.stringee.com/setting/callsetting
         try {

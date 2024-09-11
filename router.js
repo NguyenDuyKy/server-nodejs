@@ -7,6 +7,7 @@ router.get("/get-customer-info", controller.getCustomerInfo);
 router.post("/on-fail-url", controller.onFailUrl);
 router.get("/client-token", controller.generateClientToken);
 router.get("/rest-token", controller.generateRestToken);
-router.get("/room-token", controller.generateRoomToken)
+router.get("/room-token", controller.generateRoomToken);
+router.get("/health-check", controller.healthCheck);
 
 module.exports = router;
