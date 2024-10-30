@@ -105,8 +105,8 @@ const controller = {
                         if (convertAndValidatePhoneNumber(query.from)) {
                             connect.from.type = "internal";
                             connect.to.type = "external";
-                            connect.from.number = query.from;
-                            connect.from.alias = query.from;
+                            connect.from.number = query.from.replace(/^0/, "84");
+                            connect.from.alias = query.from.replace(/^0/, "84");
                             connect.to.number = query.to.replace(/^0/, "84");
                             connect.to.alias = query.to.replace(/^0/, "84");
                         } else {
